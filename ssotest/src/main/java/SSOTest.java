@@ -6,7 +6,6 @@ import java.util.TimeZone;
 
 /**
  * test class to verify Single Sign On
- * refer
  * https://www.imsglobal.org/specs/ltiv1p1/implementation-guide#toc-4
  * https://developers.google.com/api-client-library/java/google-api-java-client/samples
  * https://github.com/googleapis/google-oauth-java-client/tree/dev/google-oauth-client/src/test/java/com/google/api/client/auth/oauth
