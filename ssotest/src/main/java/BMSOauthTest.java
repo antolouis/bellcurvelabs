@@ -19,8 +19,8 @@ public class BMSOauthTest {
         LtiVerifier verifier = new LtiOauthVerifier();
         LtiSigner signer = new LtiOauthSigner();
 
-        String key = "B653FD74-86A5-4237-B566-FF3EBD0FD00E";
-        String secret = "B86864A5-0772-44C5-B151-E0A764889D4F";
+        String key = "B653FD74-86A5-4237-B566-FF3EBD0FD00EA";
+        String secret = "B86864A5-0772-44C5-B151-E0A764889D4FA";
         String url = "https://workforceedu.wincrsystem.com/SSO/Connect";
 
 
