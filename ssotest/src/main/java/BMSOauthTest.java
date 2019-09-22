@@ -1,4 +1,5 @@
 import org.apache.http.client.fluent.Request;
+import org.apache.http.client.fluent.Response;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.imsglobal.lti.launch.*;
 
@@ -39,19 +40,20 @@ public class BMSOauthTest {
         if (res.getSuccess() != null) {
 
             StringBuilder post = new StringBuilder();
-            post.append(url).append("&");
+            //post.append(url).append("&");
             String oauth_signature = (String) signedParams.get("oauth_signature");
             //signedParams.remove("oauth_signature");
             for(Object k: signedParams.keySet()){
                 System.out.println(k);
-                post.append(k).append("=").append(signedParams.get(k)).append("&");
+                post.append("&").append(k).append("=").append(signedParams.get(k));
             }
             String postEncoded = URLEncoder.encode(post.toString(),"UTF-8");
             System.out.println("POSTing\n" + postEncoded);
-            Request.Post(postEncoded)
+            Response response =  Request.Post(url+postEncoded)
                     .addHeader("Content-Type", "application/x-www-form-urlencoded")
                     .execute();
 
+            System.out.println(response.returnContent().asString());
         }
 
 
