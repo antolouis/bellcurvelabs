@@ -84,6 +84,7 @@ public class BMSOauthTest {
                     .execute();
 
             System.out.println(response.returnContent().asString());
+            //The consumer could not be authorized. Please check that your consumer key and shared secret are correctly configured.
         }
 
 
